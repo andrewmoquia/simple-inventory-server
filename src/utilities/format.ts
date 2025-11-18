@@ -2,6 +2,7 @@ import type { Response } from 'express';
 
 export type ApiResponseError = {
     message: string;
+    data?: Record<string, unknown> | null;
 };
 
 export type ApiResponseSuccess = {
@@ -10,11 +11,11 @@ export type ApiResponseSuccess = {
 };
 
 export const formatApiResponse = {
-    internalServerError: (res: Response, { message }: ApiResponseError) => {
+    internalServerError: (res: Response, { message, data = null }: ApiResponseError) => {
         return res.status(500).json({
             status: false,
             message,
-            data: null,
+            data,
         });
     },
     ok: (res: Response, { message, data }: ApiResponseSuccess) => {
@@ -24,18 +25,18 @@ export const formatApiResponse = {
             data,
         });
     },
-    notFound: (res: Response, { message }: ApiResponseError) => {
+    notFound: (res: Response, { message, data = null }: ApiResponseError) => {
         return res.status(404).json({
             status: false,
             message,
-            data: null,
+            data,
         });
     },
-    badRequest: (res: Response, { message }: ApiResponseError) => {
+    badRequest: (res: Response, { message, data = null }: ApiResponseError) => {
         return res.status(400).json({
             status: false,
             message,
-            data: null,
+            data,
         });
     },
 };
