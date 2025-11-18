@@ -17,6 +17,9 @@ For this challenge, I create a simple inventory server app.
 
 ## Installation
 
+### NOTE: Recommended version of Node is 22.13.1 to run properly without any errors.
+### LINK: https://nodejs.org/en/blog/release/v22.13.1
+
 1. Clone the repository:
 ```
 $ git clone https://github.com/andrewmoquia/simple-inventory-server.git
