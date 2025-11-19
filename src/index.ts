@@ -3,9 +3,9 @@ import helmet from 'helmet';
 import express from 'express';
 import morgan from 'morgan';
 
-import { connect } from './database.ts';
-import { config } from './config.ts';
-import itemRoutes from './routers/item.router.ts';
+import { connect } from './database';
+import { config } from './config';
+import itemRoutes from './routers/item.router';
 
 const port = config.port || 8080;
 const origin = config.origin || 'http://localhost:8080';

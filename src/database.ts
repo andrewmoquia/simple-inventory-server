@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { config } from './config.ts';
+import { config } from './config';
 
 const mongoURI = config.mongoURI || '';
 

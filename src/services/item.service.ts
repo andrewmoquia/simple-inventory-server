@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 
-import { formatApiResponse } from '../utilities/format.ts';
-import { ItemModel } from '../models/item.model.ts';
+import { formatApiResponse } from '../utilities/format';
+import { ItemModel } from '../models/item.model';
 
 export type UpdateItem = {
     name?: string;

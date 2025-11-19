@@ -1,4 +1,4 @@
-import type { Response } from 'express';
+import { Response } from 'express';
 
 export type ApiResponseError = {
     message: string;

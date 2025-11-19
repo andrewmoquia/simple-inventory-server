@@ -1,7 +1,7 @@
 import { body, validationResult } from 'express-validator';
-import type { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
-import { formatApiResponse } from '../utilities/format.ts';
+import { formatApiResponse } from '../utilities/format';
 
 export const validateCreateItem = [
     body('name')
@@ -24,7 +24,7 @@ export const validateCreateItem = [
                 data: { errors: errors.array() },
             });
         }
-        next();
+        return next();
     },
 ];
 
@@ -43,6 +43,6 @@ export const validateUpdateItem = [
                 data: { errors: errors.array() },
             });
         }
-        next();
+        return next();
     },
 ];

@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import * as itemController from '../controllers/item.controller.ts';
-import { validateCreateItem, validateUpdateItem } from '../middlewares/item.validate.ts';
+import * as itemController from '../controllers/item.controller';
+import { validateCreateItem, validateUpdateItem } from '../middlewares/item.validate';
 
 const router = Router();
 
